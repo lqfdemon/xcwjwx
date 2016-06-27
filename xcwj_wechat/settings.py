@@ -22,6 +22,8 @@ SECRET_KEY = '+y*sye#diqcx9vt8a6n0+1xacfu*#zl*@1e@954(&*$faieqte'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+TEMPLATE_PATH = os.path.join(BASE_DIR,'templates')
+TEMPLATE_DIRS=[TEMPLATE_PATH,]
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -80,5 +82,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-
+STATIC_PATH = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)

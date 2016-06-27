@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="{% static "weui/dist/style/weui.min.css "%}"/>
+    <title>Health Card</title>
+</head>
+<body>
+    <h1>健康卡信息</h1>
+        <form id="health_card_form" method="post" action="/health_card/add_health_card/">
+
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+                <div class="weui_cell">
+                    <div class="weui_cell_hd"><label class="weui_label">{{ field.help_text }}</label></div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        {{ field }}
+                    </div>
+                </div>
+            {% endfor %}
+            <br>
+            <input type="submit" name="submit" value="提交"  class="weui_btn weui_btn_primary" />
+        </form>
+    </form>
+</body>
+</html>
