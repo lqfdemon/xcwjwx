@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2a89261d-d063-41d1-a70b-a4f227194c4e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/health_card/admin.py" afterPath="$PROJECT_DIR$/health_card/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/health_card/forms.py" afterPath="$PROJECT_DIR$/health_card/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/health_card/models.py" afterPath="$PROJECT_DIR$/health_card/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/health_card/add_health_card.html" afterPath="$PROJECT_DIR$/templates/health_card/add_health_card.html" />
@@ -76,8 +76,8 @@
       <file leaf-file-name="add_health_card.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/health_card/add_health_card.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="85" column="81" selection-start-line="85" selection-start-column="81" selection-end-line="85" selection-end-column="81" />
+            <state relative-caret-position="343">
+              <caret line="100" column="84" selection-start-line="100" selection-start-column="84" selection-end-line="100" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -86,8 +86,8 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/health_card/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="50" column="13" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="13" />
+            <state relative-caret-position="277">
+              <caret line="60" column="16" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="16" />
               <folding>
                 <element signature="e#20#44#0" expanded="true" />
               </folding>
@@ -99,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/health_card/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+              <caret line="40" column="16" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -108,8 +108,8 @@
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/health_card/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            <state relative-caret-position="60">
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -136,8 +136,8 @@
         <option value="$PROJECT_DIR$/xcwj_wechat/urls.py" />
         <option value="$PROJECT_DIR$/health_card/urls.py" />
         <option value="$PROJECT_DIR$/xcwj_wechat/settings.py" />
-        <option value="$PROJECT_DIR$/health_card/admin.py" />
         <option value="$PROJECT_DIR$/health_card/views.py" />
+        <option value="$PROJECT_DIR$/health_card/admin.py" />
         <option value="$PROJECT_DIR$/health_card/models.py" />
         <option value="$PROJECT_DIR$/health_card/forms.py" />
         <option value="$PROJECT_DIR$/templates/health_card/add_health_card.html" />
@@ -521,16 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/health_card/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/health_card/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -541,18 +531,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/health_card/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/health_card/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <caret line="40" column="16" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/health_card/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="13" />
+        <state relative-caret-position="277">
+          <caret line="60" column="16" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="16" />
           <folding>
             <element signature="e#20#44#0" expanded="true" />
           </folding>
@@ -561,8 +561,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/health_card/add_health_card.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="85" column="81" selection-start-line="85" selection-start-column="81" selection-end-line="85" selection-end-column="81" />
+        <state relative-caret-position="343">
+          <caret line="100" column="84" selection-start-line="100" selection-start-column="84" selection-end-line="100" selection-end-column="84" />
           <folding />
         </state>
       </provider>

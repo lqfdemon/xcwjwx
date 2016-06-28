@@ -1,6 +1,6 @@
 #-*-coding:UTF-8-*-
 from django import forms
-from health_card.models import HealthCardInfo,EducationInfo,NationInfo,UnitInfo
+from health_card.models import HealthCardInfo,EducationInfo,NationInfo,UnitInfo,SalaryBankInfo,HandingBankInfo
 
 class HealthCardInfoForm(forms.ModelForm):
     name = forms.CharField(
@@ -51,6 +51,18 @@ class HealthCardInfoForm(forms.ModelForm):
     shebao_id=forms.IntegerField(
         label='社保卡号：',
         widget=forms.TextInput(attrs={'class': 'weui_input', 'placeholder': '请输入您的电话号码'}),
+    )
+    salary_bank =forms.ModelChoiceField(
+        queryset=SalaryBankInfo.objects.all(),
+        required=True,
+        label='工资卡发放银行：',
+        error_messages={'required': '必选项'},
+    )
+    handing_bank =forms.ModelChoiceField(
+        queryset=HandingBankInfo.objects.all(),
+        required=True,
+        label='健康卡办理银行：',
+        error_messages={'required': '必选项'},
     )
     class Meta:
         model = HealthCardInfo

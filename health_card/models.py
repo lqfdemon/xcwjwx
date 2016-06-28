@@ -1,7 +1,12 @@
 #-*-coding:UTF-8-*-
 from django.db import models
 
-class BankInfo(models.Model):
+class SalaryBankInfo(models.Model):
+    bank_name = models.CharField(max_length=20,unique=True)
+    def __unicode__(self):
+        return self.bank_name
+
+class HandingBankInfo(models.Model):
     bank_name = models.CharField(max_length=20,unique=True)
     def __unicode__(self):
         return self.bank_name
@@ -24,7 +29,6 @@ class UnitInfo(models.Model):
 class HealthCardInfo(models.Model):
     name = models.CharField(max_length=20,unique=True)
     id_num = models.IntegerField(unique=True,default=0)
-    bank_name =models.ForeignKey(BankInfo,null=True)
     nation = models.ForeignKey(NationInfo,null=True)
     education_back =models.ForeignKey(EducationInfo,null=True)
     unit_name=models.ForeignKey(UnitInfo,null=True)
@@ -33,6 +37,8 @@ class HealthCardInfo(models.Model):
     tel=models.IntegerField(unique=True,default=0)
     nonghe_id=models.IntegerField(unique=True,default=0)
     shebao_id=models.IntegerField(unique=True,default=0)
+    salary_bank=models.ForeignKey(SalaryBankInfo,null=True)
+    handing_bank=models.ForeignKey(HandingBankInfo,null=True)
     def __unicode__(self):
         return self.name
 
