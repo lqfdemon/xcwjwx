@@ -8,24 +8,89 @@
     <title>Health Card</title>
 </head>
 <body>
-    <h1>健康卡信息</h1>
-        <form id="health_card_form" method="post" action="/health_card/add_health_card/">
+    <form id="health_card_form" method="post" action="/health_card/add_health_card/">
 
-            {% csrf_token %}
-            {% for hidden in form.hidden_fields %}
-                {{ hidden }}
-            {% endfor %}
+        {% csrf_token %}
+        {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+        {% endfor %}
 
-            {% for field in form.visible_fields %}
-                <div class="weui_cell">
-                    <div class="weui_cell_hd"><label class="weui_label">{{ field.help_text }}</label></div>
-                    <div class="weui_cell_bd weui_cell_primary">
-                        {{ field }}
-                    </div>
-                </div>
-            {% endfor %}
-            <br>
-            <input type="submit" name="submit" value="提交"  class="weui_btn weui_btn_primary" />
-        </form>
+        <div class="weui_cells_title">基本信息</div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">{{ form.name.label }}</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{ form.name }}
+            </div>
+            {{ form.name.errors }}
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">{{ form.id_num.label }}</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{ form.id_num }}
+            </div>
+            {{ form.id_num.errors }}
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">{{ form.nation.label }}</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{ form.nation }}
+            </div>
+            {{ form.nation.errors }}
+        </div>
+         <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">{{ form.unit_name.label }}</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{ form.unit_name }}
+            </div>
+            {{ form.unit_name.errors }}
+        </div>
+        <div class="weui_cells_title">教育信息</div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">{{ form.education_back.label }}</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{ form.education_back }}
+            </div>
+            {{ form.education_back.errors }}
+        </div>
+        <div class="weui_cells_title">联系方式</div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">{{ form.book_address.label }}</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{ form.book_address }}
+            </div>
+            {{ form.book_address.errors }}
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">{{ form.address.label }}</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{ form.address }}
+            </div>
+            {{ form.address.errors }}
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">{{ form.tel.label }}</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{ form.tel }}
+            </div>
+            {{ form.tel.errors }}
+        </div>
+        <div class="weui_cells_title">社会保障信息</div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">{{ form.nonghe_id.label }}</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{ form.nonghe_id }}
+            </div>
+            {{ form.nonghe_id.errors }}
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">{{ form.shebao_id.label }}</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                {{ form.shebao_id }}
+            </div>
+            {{ form.shebao_id.errors }}
+        </div>
+        <br>
+        <input type="submit" name="submit" value="提交"  class="weui_btn weui_btn_primary" />
+    </form>
 </body>
 </html>
