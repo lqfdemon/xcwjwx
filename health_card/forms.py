@@ -13,18 +13,24 @@ class HealthCardInfoForm(forms.ModelForm):
         widget=forms.TextInput(attrs={'class': 'weui_input', 'placeholder': '请输入您的身份证号码'}),
     )
     nation =forms.ModelChoiceField(
+        initial='请选择',
+        widget=forms.Select(attrs={'class': 'weui_select'}),
         queryset=NationInfo.objects.all(),
         required=True,
         label='民族：',
         error_messages={'required': '必选项'},
     )
     unit_name =forms.ModelChoiceField(
+        initial='请选择',
+        widget=forms.Select(attrs={'class': 'weui_select'}),
         queryset=UnitInfo.objects.all(),
         required=True,
         label='经办单位：',
         error_messages={'required': '必选项'},
     )
     education_back = forms.ModelChoiceField(
+        initial='请选择',
+        widget=forms.Select(attrs={'class': 'weui_select'}),
         queryset=EducationInfo.objects.all(),
         required=True,
         label= '文化程度：',
@@ -53,12 +59,16 @@ class HealthCardInfoForm(forms.ModelForm):
         widget=forms.TextInput(attrs={'class': 'weui_input', 'placeholder': '请输入您的电话号码'}),
     )
     salary_bank =forms.ModelChoiceField(
+        initial='请选择',
+        widget=forms.Select(attrs={'class':'weui_select'}),
         queryset=SalaryBankInfo.objects.all(),
         required=True,
         label='工资卡发放银行：',
         error_messages={'required': '必选项'},
     )
     handing_bank =forms.ModelChoiceField(
+        initial='请选择',
+        widget=forms.Select(attrs={'class': 'weui_select'}),
         queryset=HandingBankInfo.objects.all(),
         required=True,
         label='健康卡办理银行：',
