@@ -28,7 +28,7 @@ class UnitInfo(models.Model):
 
 class HealthCardInfo(models.Model):
     name = models.CharField(max_length=20,unique=True)
-    id_num = models.IntegerField(unique=True,default=0)
+    id_num = models.CharField(max_length=18,unique=True)
     nation = models.ForeignKey(NationInfo,null=True)
     education_back =models.ForeignKey(EducationInfo,null=True)
     unit_name=models.ForeignKey(UnitInfo,null=True)

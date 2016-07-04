@@ -1,6 +1,8 @@
 #-*-coding:UTF-8-*-
 from django import forms
 from health_card.models import HealthCardInfo,EducationInfo,NationInfo,UnitInfo,SalaryBankInfo,HandingBankInfo
+from health_card.form_check import validate_id_num
+
 
 class HealthCardInfoForm(forms.ModelForm):
     name = forms.CharField(
@@ -8,7 +10,8 @@ class HealthCardInfoForm(forms.ModelForm):
         label='姓名：',
         widget=forms.TextInput(attrs={'class':'weui_input','placeholder':'请输入您的姓名'}),
     )
-    id_num=forms.IntegerField(
+    id_num=forms.CharField(
+        validators=[validate_id_num],
         label='身份证号：',
         widget=forms.TextInput(attrs={'class': 'weui_input', 'placeholder': '请输入您的身份证号码'}),
     )
