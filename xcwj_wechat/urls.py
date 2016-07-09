@@ -8,4 +8,5 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^health_card/', include('health_card.urls')),  # ADD THIS NEW TUPLE!
+    url(r'^news/', include('news.urls')),
 )

@@ -38,7 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'health_card'
+    'health_card',
+    'news',
 )
 
 MIDDLEWARE_CLASSES = (

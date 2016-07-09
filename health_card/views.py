@@ -7,7 +7,16 @@ from xcwj_wechat.wechat_sdk import WechatAPI
 
 
 def index(request):
-    return HttpResponse(u"欢迎访问香城卫计!  你好")
+    code = request.REQUEST.get('code','no code ')
+    if code == 'no code ':
+        return HttpResponse(u"未取得网页授权,请在微信客户端访问" +code)
+    wechat = WechatAPI()
+    res = wechat.get_oauth2_access_token(code)
+    if res[0]:
+        text=u"成功获取"+res[1]['openid']
+    else:
+        text=u"获取失败"+res[1]['errmsg']
+    return HttpResponse(text)
 
 def add_health_card(request):
     if request.method == 'POST':
@@ -20,6 +29,11 @@ def add_health_card(request):
 
     return render(request,'health_card/add_health_card.html',{'form':form})
 
+
+def test_m_url(request,offest,long_off):
+    id= int(offest)
+    long_id = int(long_off)
+    return HttpResponse("test id = %d longid = %d"%(id,long_id))
 
 
 def test_wechat(request):
